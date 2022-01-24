@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SchoolHWModelStoreContainer" CdmEntityContainer="SchoolHWEntities">
+    <EntitySetMapping Name="tCustormer">
+      <EntityTypeMapping TypeName="SchoolHWModel.tCustormer">
+        <MappingFragment StoreEntitySet="tCustormer">
+          <ScalarProperty Name="fPassWord" ColumnName="fPassWord" />
+          <ScalarProperty Name="fAccountNumber" ColumnName="fAccountNumber" />
+          <ScalarProperty Name="fCompanyName" ColumnName="fCompanyName" />
+          <ScalarProperty Name="fMemberType" ColumnName="fMemberType" />
+          <ScalarProperty Name="fClassMessage" ColumnName="fClassMessage" />
+          <ScalarProperty Name="fMemberName" ColumnName="fMemberName" />
+          <ScalarProperty Name="fIdentityCardId" ColumnName="fIdentityCardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tClassGrade">
+      <EntityTypeMapping TypeName="SchoolHWModel.tClassGrade">
+        <MappingFragment StoreEntitySet="tClassGrade">
+          <ScalarProperty Name="fTestPaperId" ColumnName="fTestPaperId" />
+          <ScalarProperty Name="fAfterClassGrade" ColumnName="fAfterClassGrade" />
+          <ScalarProperty Name="fBeforeClassGrade" ColumnName="fBeforeClassGrade" />
+          <ScalarProperty Name="fMemberName" ColumnName="fMemberName" />
+          <ScalarProperty Name="fIdentityCardId" ColumnName="fIdentityCardId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tStudioInformation">
+      <EntityTypeMapping TypeName="SchoolHWModel.tStudioInformation">
+        <MappingFragment StoreEntitySet="tStudioInformation">
+          <ScalarProperty Name="fClassLevel" ColumnName="fClassLevel" />
+          <ScalarProperty Name="fClassSkill" ColumnName="fClassSkill" />
+          <ScalarProperty Name="fClassCategory" ColumnName="fClassCategory" />
+          <ScalarProperty Name="fClassName" ColumnName="fClassName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tClassTestPaper">
+      <EntityTypeMapping TypeName="SchoolHWModel.tClassTestPaper">
+        <MappingFragment StoreEntitySet="tClassTestPaper">
+          <ScalarProperty Name="ClassMember" ColumnName="ClassMember" />
+          <ScalarProperty Name="TopicAnswer" ColumnName="TopicAnswer" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="TestPaperID" ColumnName="TestPaperID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tSkillTestPaper">
+      <EntityTypeMapping TypeName="SchoolHWModel.tSkillTestPaper">
+        <MappingFragment StoreEntitySet="tSkillTestPaper">
+          <ScalarProperty Name="SkillJobClass" ColumnName="SkillJobClass" />
+          <ScalarProperty Name="TopicAnswer" ColumnName="TopicAnswer" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="TopicID" ColumnName="TopicID" />
+          <ScalarProperty Name="TestPaper" ColumnName="TestPaper" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tSkillGrade">
+      <EntityTypeMapping TypeName="SchoolHWModel.tSkillGrade">
+        <MappingFragment StoreEntitySet="tSkillGrade">
+          <ScalarProperty Name="fGrade" ColumnName="fGrade" />
+          <ScalarProperty Name="fMemberName" ColumnName="fMemberName" />
+          <ScalarProperty Name="fSkillCategory" ColumnName="fSkillCategory" />
+          <ScalarProperty Name="fIdentityCardID" ColumnName="fIdentityCardID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA60E368-EB26-4614-90C7-89EB9D4686A1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GradeHW</RootNamespace>
+    <AssemblyName>GradeHW</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmClassTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClassTest.Designer.cs">
+      <DependentUpon>FrmClassTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHomePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHomePage.Designer.cs">
+      <DependentUpon>FrmHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLearnMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLearnMap.Designer.cs">
+      <DependentUpon>FrmLearnMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSkillTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSkillTest.Designer.cs">
+      <DependentUpon>FrmSkillTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSkillView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSkillView.Designer.cs">
+      <DependentUpon>FrmSkillView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolHW.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolHW.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolHW.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolHW.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SchoolHW.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="tClassGrade.cs">
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tClassTestPaper.cs">
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tCustormer.cs">
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FrmClassView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmClassView.Designer.cs">
+      <DependentUpon>FrmClassView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tSkillGrade.cs">
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tSkillTestPaper.cs">
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tStudioInformation.cs">
+      <DependentUpon>SchoolHW.tt</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmClassView.resx">
+      <DependentUpon>FrmClassView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmClassTest.resx">
+      <DependentUpon>FrmClassTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHomePage.resx">
+      <DependentUpon>FrmHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLearnMap.resx">
+      <DependentUpon>FrmLearnMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSkillTest.resx">
+      <DependentUpon>FrmSkillTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSkillView.resx">
+      <DependentUpon>FrmSkillView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="SchoolHW.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SchoolHW.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SchoolHW.edmx.diagram">
+      <DependentUpon>SchoolHW.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SchoolHW.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SchoolHW.Context.cs</LastGenOutput>
+      <DependentUpon>SchoolHW.edmx</DependentUpon>
+    </Content>
+    <Content Include="SchoolHW.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SchoolHW.edmx</DependentUpon>
+      <LastGenOutput>SchoolHW.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolHWModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tClassGrade">
+    <Key>
+      <PropertyRef Name="fIdentityCardId" />
+    </Key>
+    <Property Name="fIdentityCardId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fMemberName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fBeforeClassGrade" Type="int" />
+    <Property Name="fAfterClassGrade" Type="int" />
+    <Property Name="fTestPaperId" Type="int" />
+  </EntityType>
+  <EntityType Name="tClassTestPaper">
+    <Key>
+      <PropertyRef Name="TestPaperID" />
+      <PropertyRef Name="TopicID" />
+    </Key>
+    <Property Name="TestPaperID" Type="int" Nullable="false" />
+    <Property Name="TopicID" Type="int" Nullable="false" />
+    <Property Name="Topic" Type="nvarchar(max)" />
+    <Property Name="TopicAnswer" Type="nvarchar" MaxLength="50" />
+    <Property Name="ClassMember" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tCustormer">
+    <Key>
+      <PropertyRef Name="fIdentityCardId" />
+    </Key>
+    <Property Name="fIdentityCardId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fMemberName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fClassMessage" Type="nvarchar" MaxLength="50" />
+    <Property Name="fMemberType" Type="int" Nullable="false" />
+    <Property Name="fCompanyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="fAccountNumber" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fPassWord" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tSkillGrade">
+    <Key>
+      <PropertyRef Name="fIdentityCardID" />
+      <PropertyRef Name="fSkillCategory" />
+    </Key>
+    <Property Name="fIdentityCardID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fSkillCategory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fMemberName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="fGrade" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tSkillTestPaper">
+    <Key>
+      <PropertyRef Name="TestPaper" />
+      <PropertyRef Name="TopicID" />
+    </Key>
+    <Property Name="TestPaper" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TopicID" Type="int" Nullable="false" />
+    <Property Name="Topic" Type="nvarchar(max)" />
+    <Property Name="TopicAnswer" Type="nvarchar" MaxLength="50" />
+    <Property Name="SkillJobClass" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="tStudioInformation">
+    <Key>
+      <PropertyRef Name="fClassName" />
+      <PropertyRef Name="fClassSkill" />
+    </Key>
+    <Property Name="fClassName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fClassCategory" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fClassSkill" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="fClassLevel" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="SchoolHWModelStoreContainer">
+    <EntitySet Name="tClassGrade" EntityType="Self.tClassGrade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tClassTestPaper" EntityType="Self.tClassTestPaper" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tCustormer" EntityType="Self.tCustormer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tSkillGrade" EntityType="Self.tSkillGrade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tSkillTestPaper" EntityType="Self.tSkillTestPaper" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tStudioInformation" EntityType="Self.tStudioInformation" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

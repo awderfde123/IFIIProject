@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SchoolHWModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="SchoolHWEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tCustormer" EntityType="SchoolHWModel.tCustormer" />
+    <EntitySet Name="tClassGrade" EntityType="SchoolHWModel.tClassGrade" />
+    <EntitySet Name="tStudioInformation" EntityType="SchoolHWModel.tStudioInformation" />
+    <EntitySet Name="tClassTestPaper" EntityType="SchoolHWModel.tClassTestPaper" />
+    <EntitySet Name="tSkillTestPaper" EntityType="SchoolHWModel.tSkillTestPaper" />
+    <EntitySet Name="tSkillGrade" EntityType="SchoolHWModel.tSkillGrade" />
+  </EntityContainer>
+  <EntityType Name="tCustormer">
+    <Key>
+      <PropertyRef Name="fIdentityCardId" />
+    </Key>
+    <Property Name="fIdentityCardId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fMemberName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fClassMessage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fMemberType" Type="Int32" Nullable="false" />
+    <Property Name="fCompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fAccountNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fPassWord" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tClassGrade">
+    <Key>
+      <PropertyRef Name="fIdentityCardId" />
+    </Key>
+    <Property Name="fIdentityCardId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fMemberName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fBeforeClassGrade" Type="Int32" />
+    <Property Name="fAfterClassGrade" Type="Int32" />
+    <Property Name="fTestPaperId" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tStudioInformation">
+    <Key>
+      <PropertyRef Name="fClassName" />
+      <PropertyRef Name="fClassSkill" />
+    </Key>
+    <Property Name="fClassName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="fClassCategory" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="fClassSkill" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" Type="String" />
+    <Property Name="fClassLevel" Nullable="false" Type="Int32" />
+  </EntityType>
+  <EntityType Name="tClassTestPaper">
+    <Key>
+      <PropertyRef Name="TestPaperID" />
+      <PropertyRef Name="TopicID" />
+    </Key>
+    <Property Name="TestPaperID" Type="Int32" Nullable="false" />
+    <Property Name="TopicID" Type="Int32" Nullable="false" />
+    <Property Name="Topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TopicAnswer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ClassMember" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tSkillTestPaper">
+    <Key>
+      <PropertyRef Name="TestPaper" />
+      <PropertyRef Name="TopicID" />
+    </Key>
+    <Property Name="TestPaper" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="TopicID" Type="Int32" Nullable="false" />
+    <Property Name="Topic" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TopicAnswer" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SkillJobClass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tSkillGrade">
+    <Key>
+      <PropertyRef Name="fIdentityCardID" />
+      <PropertyRef Name="fSkillCategory" />
+    </Key>
+    <Property Name="fIdentityCardID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fSkillCategory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fMemberName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="fGrade" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
